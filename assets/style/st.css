@@ -1,0 +1,318 @@
+@font-face {
+  font-family: 'Marwan';
+  src: url('../font/3.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: 'Marwan', Arial, sans-serif;
+  direction: rtl;
+  background-color: #99b59582;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #bababa, #305738);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#loader .RevMara {
+  position: absolute;
+  bottom: 20px;
+  font-size: 1rem;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#loader .spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#loader .spinner .circle {
+  width: 65px;
+  height: 65px;
+  border: 5px solid #fff;
+  border-top: 5px solid #00690e;
+  border-radius: 50%;
+  animation: spin 0.3s linear infinite;
+}
+
+#loader .spinner .text {
+  font-size: 1.3rem;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+#loader .spinner .text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  animation: slide 1.0s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes slide {
+  0%, 100% {
+      width: 0%;
+  }
+  50% {
+      width: 100%;
+  }
+}
+
+.cont {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+}
+
+.frmH {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.frmH h1.maktab {
+  font-size: .9rem;
+  color: #008204ac;
+  margin: 0;
+}
+
+.frmH h1 {
+  font-size: .9rem;
+  color: #4CAF50;
+  margin: 0;
+}
+
+.frmH img.logo {
+  width: 80px;
+  height: auto;
+  margin-top: 10px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-3px);
+  }
+}
+
+.frmH img {
+  width: 100px;
+}
+
+.frm_sec {
+  border: 1px solid #4CAF50;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f8f8f8;
+}
+
+.frm_sec .sech {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+.frm_sec .sech2 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #d10000;
+}
+
+.frm_sec .sech3 {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #d10000;
+}
+
+.fmgp {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fmgp label {
+  width: 18%;
+  text-align: right;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  margin-right: 10px;
+  padding: 3px;
+}
+
+.fmgp input,
+.fmgp select,
+.fmgp textarea {
+  width: 80%;
+  max-width: 100%;
+  padding: 6px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.fmgp input[readonly] {
+  background-color: #e0e0e0;
+}
+
+.fmgp textarea {
+  resize: none;
+}
+
+.ImPlc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 800px;
+  height: 140px;
+  border: 2px dashed #4CAF50;
+  background-color: #f8f8f8;
+  color: #4CAF50;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 auto 15px;
+  text-align: center; 
+}
+
+.foot {
+  text-align: center;
+}
+
+.foot button {
+  padding: 10px 30px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.foot button:hover {
+  background-color: #006905c4;
+}
+
+.xxxx {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1dd600;
+}
+
+.tored {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.intsss {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.zzzzz {
+  border: 1px solid #b30000;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f8f8f8;
+}
+
+.plcHold::placeholder {
+  font-size: 0.9rem;
+  color: gray;
+  opacity: 1; 
+}
+
+@media (max-width: 768px) {
+  .cont {
+      padding: 15px;
+  }
+
+  .frm_sec {
+      padding: 15px;
+  }
+
+  .fmgp {
+      flex-direction: column;
+  }
+
+  .fmgp label {
+      width: 100%;
+      text-align: right;
+      margin-bottom: 10px;
+  }
+
+  .fmgp input,
+  .fmgp select,
+  .fmgp textarea {
+      width: 100%;
+      font-size: 1rem;
+  }
+
+  .frmH h1,
+  .frmH h1.maktab {
+      font-size: 1rem;
+  }
+  
+  .ImPlc {
+      height: auto;
+      padding: 20px;
+  }
+}
