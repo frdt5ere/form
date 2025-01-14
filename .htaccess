@@ -1,0 +1,7 @@
+Options -Indexes
+ErrorDocument 403 "Forbidden - You don't have permission to access this resource."
+ErrorDocument 404 "Not Found - The requested page could not be found."
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ ./form/notf.html [L]
