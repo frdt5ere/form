@@ -1,0 +1,7 @@
+#Options -Indexes
+#ErrorDocument 403 /forb.html
+#ErrorDocument 404 /notf.html
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^ /pu/error/notf.html [L]
